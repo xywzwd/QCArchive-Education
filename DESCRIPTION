@@ -1,0 +1,15 @@
+Package: qcedu
+Title: QCArchive Education
+Version: 0.0.1
+Authors @R: as.person(c(yuweixie <yuweix@vt.edu>))
+Description: QCArchive Education
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: 
+BugReports: 
+Encoding: UTF-8
+LazyData: true
+Author: yuweixie [aut]
+Maintainer: yuweixie <yuweix@vt.edu>

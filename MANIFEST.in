@@ -1,0 +1,7 @@
+include qcedu/qcedu.min.js
+include qcedu/qcedu.min.js.map
+include qcedu/metadata.json
+include qcedu/package-info.json
+include README.md
+include LICENSE
+include package.json
