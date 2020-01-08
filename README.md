@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # QCArchiveEducation
 
 QCArchiveEducation is a Dash component library.
@@ -92,3 +93,6 @@ If you have selected install_dependencies during the prompt, you can skip this p
     1. Publish this repository to GitHub
     2. Tag your GitHub repository with the plotly-dash tag so that it appears here: https://github.com/topics/plotly-dash
     3. Create a post in the Dash community forum: https://community.plot.ly/c/dash
+=======
+# QCArchive-Education
+>>>>>>> 791701bc2becc55cc614168f8a235cd11d545006

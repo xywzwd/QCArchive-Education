@@ -124,11 +124,6 @@ app.layout = html.Div([
 						], style={'table-layout': 'fixed', 'WORD-BREAK': 'break-all'})
 					], width=5),
 			], className='align-items-center', style={'padding-top': '70px'},  justify="center"),
-			# dbc.Row([
-			# 	dbc.Col(
-			# 		edu.searchinput(),
-			# 		),
-			# ], className='align-items-center', style={'padding-top': '20px'}),
 			dbc.Row([
 				dbc.Col(
 					html.P(html.H2("Search by common name, scienfic name, or formula"), className='text-secondary text-center'),
@@ -140,38 +135,6 @@ app.layout = html.Div([
 	html.Div([
 		dbc.Row([
 			dbc.Col(
-				# edu.appsidebar([
-				# 	edu.appsidebarheader(),
-    #         		edu.appsidebarform(),
-    #         		dbc.Row([
-    #         			dbc.Col(edu.appsidebarnav(id='current-url', navConfig={
-		  #               		'items': [
-			 #                    		{
-			 #                        		'name': 'Orbitals',
-			 #                        		'url': '/orb',
-			 #                   			},
-			 #                   			{
-			 #                        		'name': 'Dipoles',
-			 #                        		'url': '/dip',
-			 #                   			},
-			 #                   			{
-			 #                        		'name': 'Vibrations',
-			 #                        		'url': '/vib',
-			 #                   			},
-			 #                   			{
-			 #                        		'name': 'Rotations',
-			 #                        		'url': '/rot',
-			 #                   			},
-
-
-		  #                  			]
-		  #                  		}, style={'font-size': '20px'}),
-    #         				),
-    #         			], 
-    #                		style={'padding-top': '70px'}
-    #         		)
-            		
-				# ], display='lg', style={'background-color':'white'}),
 				edu.eduside(),
 								       
 				width={"size": 3},
@@ -208,12 +171,12 @@ app.layout = html.Div([
 				                	dbc.Col(dbc.ListGroupItemText([
 				                		html.P(html.H4("Molecular Formula:"), className='text-center')
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
-				                		html.P(html.H4("H20"), className='text-center')
+				                		html.P("H20", id="data1", className='text-center', style={'font-size': '12px'})
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -227,14 +190,14 @@ app.layout = html.Div([
 				                		html.Br(),
 				                		html.P(html.H4("Chemical Names:"), className='text-center'),
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
-				                		html.P(html.H4("water"), className='text-center'),
-				                		html.P(html.H4("dihydrgen oxide"), className='text-center'),
-				                		html.P(html.H4("purfied water"), className='text-center'),
+				                		html.P("water", className='text-center', style={'font-size': '12px'}),
+				                		html.P("dihydrgen oxide", className='text-center', style={'font-size': '12px'}),
+				                		html.P("purfied water", className='text-center', style={'font-size': '12px'}),
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -246,12 +209,12 @@ app.layout = html.Div([
 				                	dbc.Col(dbc.ListGroupItemText([
 				                		html.P(html.H4("Molecular Weight:"), className='text-center')
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
-				                		html.P(html.H4("18.05 g/mol"), className='text-center')
+				                		html.P("18.05 g/mol", className='text-center', style={'font-size': '12px'})
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -263,12 +226,12 @@ app.layout = html.Div([
 				                	dbc.Col(dbc.ListGroupItemText([
 				                		html.P(html.H4("PubChem CID (?):"), className='text-center')
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
-				                		html.P(html.H4("962"), className='text-center')
+				                		html.P("962", className='text-center', style={'font-size': '12px'})
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -283,17 +246,17 @@ app.layout = html.Div([
 				                		html.Br(),
 				                		html.P(html.H4("Physical Properties:"), className='text-center')
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
-				                		html.P(html.H4("clear"), className='text-center'),
-				                		html.P(html.H4("colorless"), className='text-center'),
-				                		html.P(html.H4("odorless"), className='text-center'),
-				                		html.P(html.H4("tasteless"), className='text-center'),
-				                		html.P(html.H4("freezes below 0 ℃"), className='text-center'),
-				                		html.P(html.H4("boils above 100 ℃"), className='text-center'),
+				                		html.P("clear", className='text-center', style={'font-size': '12px'}),
+				                		html.P("colorless", className='text-center', style={'font-size': '12px'}),
+				                		html.P("odorless", className='text-center', style={'font-size': '12px'}),
+				                		html.P("tasteless", className='text-center', style={'font-size': '12px'}),
+				                		html.P("freezes below 0 ℃", className='text-center', style={'font-size': '12px'}),
+				                		html.P("boils above 100 ℃", className='text-center', style={'font-size': '12px'}),
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -306,14 +269,14 @@ app.layout = html.Div([
 				                		html.Br(),
 				                		html.P(html.H4("Chemical Safety:"), className='text-center')
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 5},
 				                	),
 				                	dbc.Col(dbc.ListGroupItemText([
 				                		html.P((html.A(html.H4("Laboratory"), href='#')), className='text-center'),
 				                		html.P((html.A(html.H4("Safety Summary"), href='#')), className='text-center'),
 				                		html.P((html.A(html.H4("(LCSS) Datasheet"), href='#')), className='text-center'),
 				                	]),
-				                		width={"size": 6},
+				                		width={"size": 7},
 				                	),
 
 				                ])
@@ -324,13 +287,21 @@ app.layout = html.Div([
 				style={'background-color':'white'},
 				className='pl-0 pr-0'
 				),
-		])
-	])
+		]),
+	], className='container-fluid')
 
 
    ])
 
-
+@app.callback(
+    Output(component_id='data1', component_property='children'),
+    [Input(component_id='text_ide', component_property='value')]
+)
+def update_right_table(input_value):
+	if input_value is None:
+		return "H2O"
+	else:
+		return input_value
 
 
 if __name__ == '__main__':

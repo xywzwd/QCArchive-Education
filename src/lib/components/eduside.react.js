@@ -101,82 +101,40 @@ class eduside extends Component{
     changeSide(e, category) {
 
         const columns = [
+            // { cell: () => <input type="radio" onClick={handleClick}></input>},
             { name: category, selector: 'catename' },
             { name: 'Symmetry', selector: 'symmetry' },
             { name: 'Occupancy', selector: 'occupancy' },
             { name: 'Energy', selector: 'energy' },
-            { name: 'Show', selector: 'show' },
+            // { name: '', selector: 'show' },
           ];
 
-        // const data = [
-        //     {
-        //         id: 0,
-        //         catename: 1,
-        //         symmetry: 'A1',
-        //         occupancy: 2,
-        //         energy: -20.55,
-        //         show: false
-        //     },
-        //     {
-        //         id: 1,
-        //         catename: 1,
-        //         symmetry: 'A1',
-        //         occupancy: 2,
-        //         energy: -22.55,
-        //         show: false
-              
-        //     },
-        //     {
-        //         id: 2,
-        //         catename: 1,
-        //         symmetry: 'A1',
-        //         occupancy: 2,
-        //         energy: -22.55,
-        //         show: false
-               
-        //     },
-        //     {
-        //         id: 3,
-        //         catename: 1,
-        //         symmetry: 'A1',
-        //         occupancy: 2,
-        //         energy: -22.55,
-        //         show: false
-
-        //     },
-        //     {
-        //         id: 4,
-        //         catename: 1,
-        //         symmetry: 'A1',
-        //         occupancy: 2,
-        //         energy: -22.55,
-        //         show: false
-
-        //     },
-
-        // ];
 
 
-        const handleChange = (state) => {
-            // You can use setState or dispatch with something like Redux so we can use the retrieved data
-            console.log('Selected Rows: ', state); 
-            if (state.selectedCount != 0) {
-                this.data.forEach((row) => row.show = true); 
-                this.data[state.selectedRows[0].id].show = false;  
-            } else {
-                this.data.forEach(row => row.show = false);
-            }
+        // const handleChange = (state) => {
+        //     // You can use setState or dispatch with something like Redux so we can use the retrieved data
+        //     console.log('Selected Rows: ', state); 
+        //     if (state.selectedCount != 0) {
+        //         this.data.forEach((row) => row.show = true); 
+        //         this.data[state.selectedRows[0].id].show = false;  
+        //     } else {
+        //         this.data.forEach(row => row.show = false);
+        //     }
             
-            this.data.forEach(row => console.log(row.show));
-            this.changeSide(e, category);
-        };
+        //     this.data.forEach(row => console.log(row.show));
+        //     this.changeSide(e, category);
+        // };
+
+        const handleClick = (state) => {
+            console.log('click row: ', state);
+        }
 
         const table = (
                 <div className="container-fluid pr-0">
                     <div className="row">
                         <div className="col">
-                            <button className="btn btn-info" style={{float: 'left', width: '60px'}} 
-                            onClick={(e) => this.returnSide(e)}>Return</button>
+                            <button className="btn btn-info" style={{float: 'left', width: '60px', marginTop: '10px'}} 
+                            onClick={(e) => this.returnSide(e)}><strong>Back</strong></button>
                         </div>
                         {/* <div className="col">
                             <button className="btn btn-info" style={{float: 'right', width: '60px'}}
@@ -189,10 +147,13 @@ class eduside extends Component{
                             title= {category}
                             columns={columns}
                             data={this.data}
-                            selectableRows
-                            selectableRowsNoSelectAll
-                            onRowSelected={handleChange}
-                            selectableRowsDisabledField="show"                       
+                            onRowClicked={handleClick}
+                            highlightOnHover
+                            pointerOnHover
+                            // selectableRows
+                            // selectableRowsNoSelectAll
+                            // onRowSelected={handleChange}
+                            // selectableRowsDisabledField="show"                       
                         />
                         </div>
                     </div>
